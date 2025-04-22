@@ -7,7 +7,7 @@ import './assets/animations.css';
 function App() {
   return (
       <MyState>
-        <Router basename="/doc-api">
+        <Router basename="/homaro">
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
