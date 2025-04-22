@@ -7,7 +7,7 @@ import './assets/animations.css';
 function App() {
   return (
       <MyState>
-        <Router>
+        <Router basename="/doc-api">
           <Routes>
             <Route path="/" element={<Home />} />
           </Routes>
