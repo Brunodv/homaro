@@ -6,14 +6,14 @@ function Sec1() {
   return (
     <>
       <motion.div
-        className="relative h-screen flex flex-col justify-between text-white bg-[url('images/img2.png')] bg-cover bg-center z-1"
+        className="relative h-screen flex flex-col justify-between text-white bg-[url('/images/img2.png')] bg-cover bg-center z-1"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
         {/* Imagen sobrepuesta con efecto de zoom suave */}
         <motion.div
-          className="absolute top-14 inset-0 bg-[url('images/img1.png')] bg-cover bg-center z-2"
+          className="absolute top-14 inset-0 bg-[url('/images/img1.png')] bg-cover bg-center z-2"
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.2 }}
@@ -21,7 +21,7 @@ function Sec1() {
 
         {/* Vector overlay con fade delay */}
         <motion.div
-          className="absolute inset-0 bg-[url('images/vector.png')] top-32 left-48 bg-no-repeat bg-center mix-blend-overlay z-1"
+          className="absolute inset-0 bg-[url('/images/vector.png')] top-32 left-48 bg-no-repeat bg-center mix-blend-overlay z-1"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2, delay: 0.6 }}
