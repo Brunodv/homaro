@@ -2,7 +2,6 @@ import './App.css';
 import MyState from './context/MyState';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import './assets/animations.css';
 
 function App() {
   return (
