@@ -1,0 +1,126 @@
+/* src/assets/animaciones.css */
+
+@layer utilities {
+    /* -------------------------------
+       Animaciones Generales
+    --------------------------------*/
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .fade-in {
+      animation: fade-in 0.8s ease-out forwards;
+      opacity: 0; /* Estado inicial */
+    }
+   /* Animaciones */
+@keyframes slide-up {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Clases utilitarias */
+.slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+.slide-down {
+  animation: slide-down 0.8s ease-out forwards;
+}
+
+.slide-right {
+  animation: slide-right 1s ease-out forwards;
+}
+
+.slide-left {
+  animation: slide-left 0.8s ease-out forwards;
+}
+
+  
+    @keyframes pulse-scale {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+  
+    .pulse-scale {
+      animation: pulse-scale 1.5s infinite ease-in-out;
+    }
+  
+    /* -------------------------------
+       Animaciones para SVG
+    --------------------------------*/
+    @keyframes stroke-draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  
+     .stroke-draw {
+    stroke-dasharray: 251.2; /* ⚠️ Valor aproximado para un círculo de r=40 (2πr) */
+    stroke-dashoffset: 251.2;
+    animation: stroke-draw 2s ease forwards;
+  }
+    @keyframes svg-pulse {
+      0%, 100% {
+        transform: scale(1);
+        fill: #fff;
+      }
+      50% {
+        transform: scale(1.1);
+        fill: #facc15; /* amarillo Tailwind */
+      }
+    }
+  
+    .svg-pulse {
+      animation: svg-pulse 1.5s infinite;
+      transform-origin: center;
+    }
+  }
+  
+  /*--------------------GLASSSSSWSSSS---------------------------------------*/
+  
