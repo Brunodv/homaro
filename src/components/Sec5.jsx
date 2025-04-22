@@ -15,7 +15,7 @@ también<span className="text-green-600 italic font-extrabold">transformamos el 
 habitamos.</span>
     </p>
 
-    <img src="/images/img5.png" className="w-[90%] xl:w-[40%] xl:h-[80%] object-cover m-10 rounded-3xl" alt="" />
+    <img src="images/img5.png" className="w-[90%] xl:w-[40%] xl:h-[80%] object-cover m-10 rounded-3xl" alt="" />
     
   </div>
 </div>

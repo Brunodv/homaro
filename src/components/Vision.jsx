@@ -8,7 +8,7 @@ function Vision() {
       {/* Imagen (bloque amarillo) */}
       <div
         className="w-full md:w-1/2 h-64 md:h-screen bg-contain bg-no-repeat bg-center"
-        style={{ backgroundImage: 'url("/images/img3.jpg")' }}
+        style={{ backgroundImage: 'url("/homaro/images/img3.jpg")' }}
       ></div>
 
       {/* Texto (bloque verde) */}
