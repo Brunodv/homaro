@@ -5,6 +5,7 @@ import Sec3 from "../components/Sec3";
 import Sec4 from "../components/Sec4";
 import Sec5 from "../components/Sec5";
 import Footer from "../components/Footer";
+import BouncingCircle from "../components/BouncingCircle";
 
 function Home() {
   return (
