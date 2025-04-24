@@ -78,7 +78,7 @@ function Sec3() {
             border: circle.border,
           }}
         >
-          <span className="text-center text-2xl p-2">{circle.title}</span>
+          <span className="text-center text-2xl p-3">{circle.title}</span>
         </motion.div>
       ))}
 
