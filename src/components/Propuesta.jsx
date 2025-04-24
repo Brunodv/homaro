@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { TfiPlus } from "react-icons/tfi";
 
 function Propuesta() {
   return (
@@ -16,19 +17,102 @@ function Propuesta() {
       <div className="flex flex-col lg:flex-row gap-6">
         
         {/* Tarjeta 1 */}
-        <motion.div className="border border-blue-600 rounded-3xl h-[440px] flex items-end p-4 w-full xl:w-[30%]">
-          <p className="text-blue-800 font-semibold text-3xl px-4">Consultoría</p>
-        </motion.div>
+      <div
+      className="relative w-full xl:w-[30%] h-[440px]"
+      style={{ perspective: 1000 }}
+    >
+      <motion.div
+        className="w-full h-full relative cursor-pointer border border-blue-600 rounded-3xl"
+        whileHover={{ rotateY: 180 }}
+        whileTap={{ rotateY: 180 }}
+        transition={{ duration: 0.8, ease: "easeInOut" }}
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        {/* Cara frontal */}
+        <div className="absolute w-full h-full backface-hidden flex flex-col justify-between p-4 bg-white rounded-3xl">
+  {/* Símbolo + en la esquina superior derecha */}
+  <div className="flex justify-end">
+    <TfiPlus className="text-blue-600" size={56}/>
+  </div>
 
-        {/* Tarjeta 2 */}
-        <motion.div className="rounded-3xl h-[440px] flex items-end p-8 w-full xl:w-[30%] bg-orange-500 lg:mt-32 box" transition={{duration:1.5}} animate={{scale:[1,1.1,1.1,1,1],rotate:[0,0,270,270,0], borderRadius:["20%","20%","50%","50%","20%"]}}>
-          <p className="text-white font-semibold text-3xl px-4">Educación</p>
-        </motion.div>
+  {/* Título en la parte inferior */}
+  <p className="text-blue-800 font-semibold text-3xl px-4">Consultoría</p>
+</div>
 
-        {/* Tarjeta 3 */}
-        <div className="border border-blue-600 rounded-3xl h-[440px] flex items-end p-4 w-full xl:w-[30%] lg:mb-32">
-          <p className="text-blue-800 font-semibold text-3xl px-4">Plataformas</p>
+        {/* Cara trasera */}
+        <div className="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-blue-600 text-white rounded-3xl">
+          <p className="text-xl font-bold">Más información</p>
         </div>
+      </motion.div>
+    </div>
+        {/* Tarjeta 2 */}
+<div
+  className="relative w-full xl:w-[30%] h-[440px] rounded-3xl"
+  style={{ perspective: 1000 }}
+>
+  <motion.div
+    className="w-full h-full relative cursor-pointer"
+    whileHover={{ rotateY: 180 }}
+    whileTap={{ rotateY: 180 }} 
+    transition={{ duration: 1, ease: "easeInOut" }}
+    style={{ transformStyle: "preserve-3d" }}
+    animate={{
+      scale: [1, 1.1, 1.1, 1, 1],
+      rotate: [0, 0, 270, 270, 0],
+      borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+    }}
+  >
+    {/* Cara frontal */}
+    
+  <div className="absolute w-full h-full backface-hidden flex flex-col justify-between p-4 bg-orange-500 rounded-3xl">
+  {/* Símbolo + en la esquina superior derecha */}
+  <div className="flex justify-end">
+    <TfiPlus className="text-white" size={56} />
+  </div>
+
+  {/* Título en la parte inferior */}
+  <p className="text-white font-semibold text-3xl px-4">Educación</p>
+</div>
+
+    {/* Cara trasera */}
+    <div className="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-orange-700 text-white rounded-3xl">
+      <p className="text-xl font-bold">Más sobre Educación</p>
+
+    </div>
+    
+  </motion.div>
+</div>
+
+{/* Tarjeta 3 - estática pero con flip */}
+<div
+  className="relative w-full xl:w-[30%] h-[440px]"
+  style={{ perspective: 1000 }}
+>
+  <motion.div
+    className="w-full h-full relative cursor-pointer border border-blue-600 rounded-3xl"
+    whileHover={{ rotateY: 180 }}
+    whileTap={{ rotateY: 180 }}
+    transition={{ duration: 1, ease: "easeInOut" }}
+    style={{ transformStyle: "preserve-3d" }}
+  >
+    {/* Cara frontal */}
+    <div className="absolute w-full h-full backface-hidden flex flex-col justify-between p-4 bg-white rounded-3xl">
+  {/* Símbolo + en la esquina superior derecha */}
+  <div className="flex justify-end">
+    <TfiPlus className="text-blue-600" size={56} />
+  </div>
+
+  {/* Título en la parte inferior */}
+  <p className="text-blue-800 font-semibold text-3xl px-4">Plataformas</p>
+</div>
+
+    {/* Cara trasera */}
+    <div className="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-blue-600 text-white rounded-3xl">
+      <p className="text-xl font-bold">Explora más plataformas</p>
+    </div>
+  </motion.div>
+</div>
+
 
       </div>
     </div>

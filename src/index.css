@@ -1,14 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 @layer base {
-  @font-face {
-    font-family: 'Radikal';
-    src: url('/font/Radikal Thin.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  html {
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+@layer utilities {
+  .backface-hidden {
+    backface-visibility: hidden;
   }
 
-  body {
-    font-family:'Roboto', sans-serif;
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
   }
 }
