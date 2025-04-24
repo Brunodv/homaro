@@ -5,7 +5,7 @@ function Sec1() {
   return (
     <>
       <motion.div
-        className="min-h-screen flex flex-col justify-between text-white bg-[url('/images/fondo.png')] bg-cover bg-center z-1"
+        className="min-h-screen flex flex-col justify-between text-white bg-[url('/images/fondo.png')] bg-cover bg-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
