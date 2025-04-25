@@ -3,7 +3,7 @@ import { TfiPlus } from "react-icons/tfi";
 
 function Propuesta() {
   return (
-    <div className="w-[90%] min-h-screen px-6 py-12 text-black   m-auto bg-gray-200 rounded-3xl gap-12 flex flex-col xl:gap-0 md:py-24 md:gap-18">
+    <div className="w-[90%] min-h-screen px-6 py-12 text-black   m-auto bg-gray-200 rounded-3xl gap-12 flex flex-col xl:gap-0 md:py-24 md:gap-18 mb-20">
       {/* Título y párrafo */}
       <div className="w-full">
         <h2 className="text-xl px-2 font-bold text-blue-700 mb-8 sm:px-14 md:text-2xl md:px-16 lg:px-22 xl:px-22 2xl:text-xl 2xl:font-bold 2xl:mb-2 ">PROPUESTA</h2>
