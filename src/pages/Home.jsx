@@ -10,7 +10,7 @@ import Nav from "../components/Nav";
 
 function Home() {
   return (
-    <div className="relative w-full flex flex-col gap-10 text-white overflow-hidden">
+    <div className="relative w-full flex flex-col text-white overflow-hidden">
       <Sec1 />
       <Vision />
       <Propuesta />
