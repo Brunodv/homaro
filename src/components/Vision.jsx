@@ -1,33 +1,23 @@
-//import useScrollAnimation from "../hooks/useScrollAnimation";
-
 function Vision() {
-  //const ref = useScrollAnimation("fade-in");
 
   return (
-    <div className="min-h-screen flex flex-col w-full md:flex-row items-center justify-center">
-      {/* Imagen (bloque amarillo) */}
+    <div className="h-auto mb-24 flex flex-col w-full md:flex-row md:h-[70vh] lg:w-[90%] lg:m-0 lg:m-auto xl:h-[100vh]">
       <div
-        className="w-full md:w-1/2 h-64 md:h-screen bg-contain bg-no-repeat bg-center"
-        style={{ backgroundImage: 'url("images/img3.jpg")' }}
-      ></div>
+        className="w-[70%] sm:w-[63%] m-0 m-auto"
+      ><img src="images/img3.jpg" className="w-full h-full object-cover" alt="" />
+</div>
 
-      {/* Texto (bloque verde) */}
-      <div
-       /* ref={ref}*/
-        className="w-full md:w-1/2 flex items-left justify-left md:pt-32"
-      >
-        <div className="w-full md:w-[90%] text-left">
-          <h2 className="p-8 text-xl sm:text-2xl font-bold text-blue-700 ">
+        <div className="w-full text-left lg:w-[90%] xl:w-[70%] xl:px-20 md:m-0 md:m-auto md:w-[50%]">
+          <h2 className="px-8 text-xl sm:text-lg sm:px-12 font-bold text-blue-700 md:px-2 xl:text-2xl">
             VISIÓN
           </h2>
-          <p className="p-8 text-lg font-light sm:text-xl md:text-4xl text-gray-700 leading-tight ]">
+          <p className="px-8 py-4 text-lg font-light sm:text-2xl sm:px-12 xl:text-3xl text-gray-700 leading-tight md:px-2 lg:pb-28 xl:pb-42 2xl:pb-72 xl:text-4xl">
           Empoderar a la humanidad con herramientas, 
 conocimiento y experiencia para abrazar la 
 transformación digital desde una mirada 
 profundamente humana.          </p>
         </div>
       </div>
-    </div>
   );
 }
 

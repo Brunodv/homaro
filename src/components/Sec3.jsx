@@ -1,113 +1,77 @@
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 function Sec3() {
-  const circlesRef = useRef([]);
+  const containerRef = useRef(null);
+  const { scrollYProgress } = useScroll({ target: containerRef, offset: ["start end", "end start"] });
 
-  const circles = useRef(
-    Array.from({ length: 6 }).map((_, index) => ({
-      id: index,
-      title: ["Diseño de Productos", "Ingeniería", "Construcción", "Arquitectura", "Operación", "Manufactura de Productos"][index],
-      color: "#e5e7f440",
-      border: "2px solid #FFFFFF",
-      size: window.innerWidth < 640 ? 100 + Math.random() * 20 : 200 + Math.random() * 40, // Ajustar tamaño en móviles
-      x: Math.random() * (window.innerWidth - 200),
-      y: Math.random() * (window.innerHeight - 200),
-      dx: Math.random() < 0.5 ? 1 : -1,
-      dy: Math.random() < 0.5 ? 1 : -1,
-      speed: 0.5 + Math.random() * 0.5,
-      controls: useAnimation(),
-    }))
-  ).current;
+  const titles = [
+    "Diseño de Productos",
+    "Ingeniería",
+    "Construcción",
+    "Arquitectura",
+    "Operación",
+    "Manufactura de Productos",
+  ];
 
-  useEffect(() => {
-    const move = () => {
-      const width = window.innerWidth;
-      const height = window.innerHeight;
-
-      // Revisar las colisiones y mover las esferas
-      for (let i = 0; i < circles.length; i++) {
-        let circle = circles[i];
-
-        // Movimiento básico
-        circle.x += circle.dx * circle.speed;
-        circle.y += circle.dy * circle.speed;
-
-        // Rebote en bordes
-        if (circle.x <= 0 || circle.x >= width - circle.size) circle.dx *= -1;
-        if (circle.y <= 0 || circle.y >= height - circle.size) circle.dy *= -1;
-
-        // Colisiones con otras esferas
-        for (let j = i + 1; j < circles.length; j++) {
-          const other = circles[j];
-          const dx = other.x - circle.x;
-          const dy = other.y - circle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-
-          // Si las esferas están demasiado cerca, cambiar la dirección
-          if (distance < (circle.size + other.size) / 2) {
-            [circle.dx, other.dx] = [other.dx, circle.dx];
-            [circle.dy, other.dy] = [other.dy, circle.dy];
-
-            // Evitar que se sobrepongan
-            const overlap = (circle.size + other.size) / 2 - distance;
-            const overlapX = (dx / distance) * overlap;
-            const overlapY = (dy / distance) * overlap;
-
-            circle.x -= overlapX;
-            circle.y -= overlapY;
-            other.x += overlapX;
-            other.y += overlapY;
-          }
-        }
-
-        // Animar las esferas
-        circle.controls.start({
-          x: circle.x,
-          y: circle.y,
-          transition: { duration: 0.01, ease: "linear" },
-        });
-      }
-
-      requestAnimationFrame(move);
-    };
-
-    move();
-  }, []);
+  const positions = [
+    { top: "0%", left: "30%", speed: 100 },
+    { top: "0%", left: "60%", speed: 180 },
+    { top: "10%", left: "80%", speed: 140 },
+    { top: "15%", left: "13%", speed: 200 },
+    { top: "50%", left: "80%", speed: 90 },
+    { top: "60%", left: "5%", speed: 160 },
+  ];
 
   return (
-    <div className="relative w-full min-h-[120vh] bg-gradient-to-t from-[#011345] to-[#023BC6] overflow-hidden z-[-2]">
-      {circles.map((circle) => (
-        <motion.div
-          key={circle.id}
-          animate={circle.controls}
-          className="absolute rounded-full flex items-center justify-center text-white font-bold"
-          style={{
-            width: circle.size,
-            height: circle.size,
-            backgroundColor: circle.color,
-            border: circle.border,
-          }}
-        >
-          <span
-            className="text-center"
-            style={{
-              fontSize: circle.size < 150 ? "14px" : "20px", // Ajustar tamaño del texto según el tamaño de la esfera
-              padding: circle.size < 150 ? "6px" : "10px", // Ajustar padding para texto más pequeño
-            }}
-          >
-            {circle.title}
-          </span>
-        </motion.div>
-      ))}
+    <div
+      ref={containerRef}
+      className="relative w-full min-h-[120vh] bg-gradient-to-t from-[#011345] to-[#023BC6] overflow-hidden z-[-2]"
+    >
+      {positions.map((pos, index) => {
+        const y = useTransform(scrollYProgress, [0, 1], [0, pos.speed]);
 
-      <div className="absolute inset-0 flex items-center justify-center">
+        return (
+          <motion.div
+            key={index}
+            style={{
+              y,
+              position: "absolute",
+              top: pos.top,
+              left: pos.left,
+              width: window.innerWidth < 640 ? 110 : 200,
+              height: window.innerWidth < 640 ? 110 : 200,
+              backgroundColor: "transparent",
+              border: "2px solid #FFFFFF",
+            }}
+            className="rounded-full flex items-center justify-center text-white font-thin"
+          >
+            <span
+              className="text-center"
+              style={{
+                fontSize: window.innerWidth < 640 ? "14px" : "20px",
+                padding: window.innerWidth < 640 ? "6px" : "10px",
+              }}
+            >
+              {titles[index]}
+            </span>
+          </motion.div>
+        );
+      })}
+
+      {/* Círculo central con parallax */}
+      <motion.div
+        style={{
+          y: useTransform(scrollYProgress, [0, 1], [0, 150]),
+        }}
+        className="absolute inset-0 flex items-center justify-center"
+      >
         <div className="rounded-full aspect-square w-[70vw] md:w-[50vw] xl:w-[35vw] bg-[url('/images/img4.png')] bg-cover bg-center p-6 z-[-1] flex items-center justify-center">
           <h1 className="text-3xl xl:text-5xl text-white leading-tight text-center">
             Experiencia en todas las industrias que impactan al mundo.
           </h1>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
