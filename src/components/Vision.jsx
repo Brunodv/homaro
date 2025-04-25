@@ -4,7 +4,7 @@ function Vision() {
   //const ref = useScrollAnimation("fade-in");
 
   return (
-    <div className="min-h-screen flex flex-col w-full md:flex-row">
+    <div className="min-h-screen flex flex-col w-full md:flex-row items-center justify-center">
       {/* Imagen (bloque amarillo) */}
       <div
         className="w-full md:w-1/2 h-64 md:h-screen bg-contain bg-no-repeat bg-center"

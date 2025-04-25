@@ -4,9 +4,9 @@ function Sec4() {
   return (
     <div className="min-h-screen flex items-center justify-center">
       {/* Contenedor principal responsive */}
-      <div className="w-full gap-2 h-32 xl:gap-32 flex flex-col xl:flex-row xl:w-[70%] xl:h-[55%]">
+      <div className="w-full gap-2 h-[100%] xl:gap-32 flex flex-col xl:flex-row xl:w-[70%] xl:h-[55%]">
         {/* Título con borde animado */}
-        <div className="flex  xl:w-[80%] px-8 xl:px-0 xl:items-start relative md:items-center md:justify-center md:h-64">
+        <div className="flex  xl:w-[80%] px-8 xl:px-0 xl:items-start relative md:items-center md:justify-center">
           {/* Animación del borde: derecha en xl, abajo en móvil */}
           <motion.div
             className="xl:bg-blue-700 md:bg-white"
@@ -41,21 +41,21 @@ function Sec4() {
             }}
             id="motion-border"
           />
-          <div className="flex flex-col  md:flex-row md:gap-4 px-10 sm:flex-col xl:flex-col">
-          <h2 className="text-4xl md:text-4xl xl:text-6xl text-blue-700 z-10 anotherFont">
+          <div className="flex flex-col sm:gap-4 sm:flex-row md:gap-4 md:px-10 sm:flex-col xl:flex-col">
+          <h2 className="text-4xl sm:text-3xl md:text-4xl xl:text-6xl text-blue-700 z-10 anotherFont">
             Impulsamos
           </h2>
-          <h2 className="text-4xl md:text-4xl xl:text-6xl text-blue-700 z-10 anotherFont">
+          <h2 className="text-4xl sm:text-3xl md:text-4xl xl:text-6xl text-blue-700 z-10 anotherFont">
             el cambio
           </h2>
-          <h2 className="text-4xl md:text-4xl xl:text-6xl text-blue-700 z-10 anotherFont">
+          <h2 className="text-4xl sm:text-3xl md:text-4xl xl:text-6xl text-blue-700 z-10 anotherFont">
           con propósito
           </h2></div>
         </div>
 
         {/* Texto inferior */}
-        <div className="w-full xl:w-[93%] flex items-end p-18 xl:p-2 xl:mt-20">
-          <p className="text-2xl xl:text-4xl text-gray-600 font-light">
+        <div className="w-full xl:w-[93%] flex items-end p-8 md:p-18 xl:p-2 xl:mt-20">
+          <p className="text-md sm:text-2xl xl:text-4xl text-gray-600 font-light">
             En Homaro, creemos que la tecnología es una herramienta poderosa
             para mejorar no solo los procesos, sino también la vida de las
             personas que los hacen posibles. Somos una organización
