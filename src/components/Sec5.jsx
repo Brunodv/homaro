@@ -1,9 +1,9 @@
-function Sec5(){
-    return(<>
-  <div className="xl:min-h-screen flex items-center justify-center">
-  <div className="w-[90%] h-[70%] bg-gray-100 rounded-3xl flex flex-col xl:flex-row items-center gap-12 ">
+function Sec5() {
+  return (
+    <div className="xl:min-h-screen flex items-center justify-center">
+  <div className="w-[90%] h-[70%] xl:w-[80%] bg-gray-100 rounded-3xl flex flex-col xl:flex-row items-center gap-12 ">
     
-    <p className="w-[80%] xl:w-[60%] text-gray-700 pt-16 xl:pl-16 xl:pb-16 text-2xl xl:text-4xl">
+    <p className="w-[80%] xl:w-[60%] text-gray-700 pt-16 xl:pl-16 xl:pb-16 text-2xl xl:text-4xl font-light">
     Nuestra pasión es ayudar a organizaciones 
 —y a las personas dentro de ellas— a 
 evolucionar. Trabajamos para que cada 
@@ -19,7 +19,7 @@ habitamos.</span>
     
   </div>
 </div>
-    </>)
+  );
 }
 
 export default Sec5;

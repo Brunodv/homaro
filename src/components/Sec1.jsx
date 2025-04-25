@@ -5,7 +5,7 @@ function Sec1() {
   return (
     <>
       <motion.div
-        className="min-h-screen flex flex-col justify-between text-white bg-[url('/images/fondo.png')] bg-cover bg-center"
+        className="min-h-screen flex flex-col justify-between text-white bg-[url('/images/fondo2.png')] bg-cover bg-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -44,15 +44,14 @@ function Sec1() {
         {/* Contenido central inferior */}
         <div className="w-full flex flex-col md:flex-row items-end h-auto md:h-64 px-4 md:px-0 pb-10 md:pb-0 gap-4">
           <div className="hidden md:block w-[12%] h-64 z-10000 text-left"></div>
-
           <motion.div
-            className="w-full md:w-[58%] z-10000 text-left"
+            className="w-full md:w-[58%] z-1 text-left"
             initial={{ x: -50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-tight">Transformación digital</h1>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-tight">Centrada en las Personas</h1>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-none font-light ">Transformación digital</h1>
+            <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-none ">centrada en las personas</h1>
             <motion.button
               whileHover={{ scale: 1.05, backgroundColor: "#123c7d" }}
               className="cursor-pointer rounded-full bg-[#0D2C5C] md:mt-8 mb-4 text-white font-semibold py-2 px-6 md:px-8 flex items-center justify-center transition text-sm md:text-base"
