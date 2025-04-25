@@ -3,7 +3,7 @@ import { TfiPlus } from "react-icons/tfi";
 
 function Propuesta() {
   return (
-    <div className="w-[90%] min-h-screen px-6 py-12 md:px-32 md:py-24 text-black m-auto bg-gray-200 rounded-3xl">
+    <div className="w-[90%] min-h-screen px-6 py-12 md:px-32 md:py-24 text-black m-auto bg-gray-200 rounded-3xl gap-20 flex flex-col xl:gap-0 ">
       {/* Título y párrafo */}
       <div className="w-full">
         <h2 className="text-2xl font-bold text-blue-700 mb-4">PROPUESTA</h2>
@@ -13,14 +13,14 @@ function Propuesta() {
       </div>
 
       {/* Tarjetas */}
-      <div className="flex flex-col lg:flex-row gap-18 justify-center">
+      <div className="flex flex-col lg:flex-row gap-4 xl:gap-18 justify-center">
         {/* Tarjeta 1 */}
         <div
-          className="relative w-full sm:w-[80%] md:w-[45%] xl:w-[30%] h-[440px]"
+          className="relative w-full sm:w-[80%] md:w-[90%] xl:w-[30%] h-[440px]"
           style={{ perspective: 1000 }}
         >
           <motion.div
-            className="w-full h-full relative cursor-pointer border border-blue-600 rounded-3xl mt-20"
+            className="w-full h-full relative cursor-pointer border border-blue-600 rounded-3xl xl:mt-20"
             whileHover={{ rotateY: 180 }}
             whileTap={{ rotateY: 180 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -46,11 +46,11 @@ function Propuesta() {
 
         {/* Tarjeta 2 */}
         <div
-          className="relative w-full sm:w-[80%] md:w-[45%] xl:w-[30%] h-[440px] rounded-3xl"
+          className="relative w-full sm:w-[80%] md:w-[90%] xl:w-[30%] h-[440px] rounded-3xl"
           style={{ perspective: 1000 }}
         >
           <motion.div
-            className="w-full h-full relative cursor-pointer mt-40"
+            className="w-full h-full relative cursor-pointer xl:mt-40"
             whileHover={{ rotateY: 180 }}
             whileTap={{ rotateY: 180 }}
             transition={{ duration: 1, ease: "easeInOut" }}
@@ -81,7 +81,7 @@ function Propuesta() {
 
         {/* Tarjeta 3 - estática pero con flip */}
         <div
-          className="relative w-full sm:w-[80%] md:w-[45%] xl:w-[30%] h-[440px]"
+          className="relative w-full sm:w-[80%] md:w-[90%] xl:w-[30%] h-[440px]"
           style={{ perspective: 1000 }}
         >
           <motion.div
