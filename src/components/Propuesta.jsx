@@ -34,12 +34,12 @@ function Propuesta() {
               </div>
 
               {/* Título en la parte inferior */}
-              <p className="text-blue-800 font-semibold text-3xl px-4">Consultoría</p>
+              <p className="text-blue-800 font-semibold text-3xl px-4 select-none">Consultoría</p>
             </div>
 
             {/* Cara trasera */}
             <div className="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-blue-600 text-white rounded-3xl">
-              <p className="text-xl font-bold">Más información</p>
+              <p className="text-xl font-bold select-none">Más información</p>
             </div>
           </motion.div>
         </div>
@@ -69,12 +69,12 @@ function Propuesta() {
               </div>
 
               {/* Título en la parte inferior */}
-              <p className="text-white font-semibold text-3xl px-4">Educación</p>
+              <p className="text-white font-semibold text-3xl px-4 select-none">Educación</p>
             </div>
 
             {/* Cara trasera */}
             <div className="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-orange-700 text-white rounded-3xl">
-              <p className="text-xl font-bold">Más sobre Educación</p>
+              <p className="text-xl font-bold select-none">Más sobre Educación</p>
             </div>
           </motion.div>
         </div>
@@ -99,12 +99,12 @@ function Propuesta() {
               </div>
 
               {/* Título en la parte inferior */}
-              <p className="text-blue-800 font-semibold text-3xl px-4">Plataformas</p>
+              <p className="text-blue-800 font-semibold text-3xl px-4 select-none">Plataformas</p>
             </div>
 
             {/* Cara trasera */}
             <div className="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-blue-600 text-white rounded-3xl">
-              <p className="text-xl font-bold">Explora más plataformas</p>
+              <p className="text-xl font-bold select-none">Explora más plataformas</p>
             </div>
           </motion.div>
         </div>
