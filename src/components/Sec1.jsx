@@ -27,7 +27,7 @@ useEffect(() => {
     <>
       <motion.div
         className="relative min-h-screen items-end flex flex-col text-white bg-[url('/images/img2.png')] bg-cover bg-center z-0"
-        style={{ transform: `translateY(${offsetY * 0.3}px)` }}
+        style={{ transform: `translateY(${offsetY * 0.4}px)` }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -36,10 +36,10 @@ useEffect(() => {
 <div
   style={{
     transform: isDesktop
-      ? `translateY(${offsetY * 0.1}px)`   // PC: mueve 0.5
+      ? `translateY(${offsetY * 0.05}px)`   // PC: mueve 0.5
       : `translateY(${offsetY * 0.17}px)`,  // Móvil: mueve 0.2
   }}
-  className="mt-14 absolute inset-0 m-0 m-auto bg-[url('/images/img1.png')] bg-no-repeat bg-cover bg-center h-[70%] pointer-events-none xl:bg-contain xl:h-[100%]"
+  className="mt-14 absolute inset-0 m-0 m-auto bg-[url('/images/img1.png')] bg-no-repeat bg-cover bg-center h-[70%] pointer-events-none xl:bg-cover xl:h-[100%] xl:mt-10"
 ></div>
 
         {/* Imagen sobrepuesta con efecto de zoom suave */}
