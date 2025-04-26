@@ -1,9 +1,9 @@
 function Vision() {
 
   return (
-    <div className="h-auto mb-24 flex flex-col w-full md:flex-row md:h-[70vh] lg:w-[90%] lg:m-0 lg:m-auto xl:h-[190vh]">
+    <div className="h-[250vh] mb-24 flex flex-col w-full md:flex-row md:h-[70vh] lg:w-[90%] lg:m-0 lg:m-auto xl:h-[250vh]">
       <div
-        className="w-[70%] sm:w-[63%] m-0 m-auto"
+        className="w-[70%] sm:w-[63%] mx-auto mt-200 mb-12 xl:m-auto xl: m-0"
       ><img src="images/img3.jpg" className="w-full h-full object-cover" alt="" />
 </div>
 

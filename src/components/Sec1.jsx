@@ -26,20 +26,20 @@ useEffect(() => {
   return (
     <>
       <motion.div
-        className="relative min-h-screen items-end flex flex-col text-white bg-[url('/images/img2.png')] bg-cover bg-center z-0"
+        className="relative min-h-[120vh] items-end flex flex-col text-white bg-[url('/images/img2.png')] bg-cover bg-center z-0"
         style={{ transform: `translateY(${offsetY * 0.4}px)` }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-  <div style={{ transform: `translateY(-${offsetY * 0.1}px)` }} className="mt-14 absolute inset-0 m-0 m-auto bg-[url('/images/vector.png')] bg-no-repeat bg-contain bg-center h-[80%] w-[90%] mix-blend-overlay pointer-events-none  xl:mt-42 xl:mr-9"></div>
+  <div style={{ transform: `translateY(-${offsetY * 0.1}px)` }} className="absolute inset-0 mb-70  bg-[url('/images/vector.png')] bg-no-repeat bg-contain bg-center w-[100%] mix-blend-overlay pointer-events-none xl:w-[60%] xl:h-[60%]  xl:mt-42 xl:ml-110"></div>
 <div
   style={{
     transform: isDesktop
-      ? `translateY(${offsetY * 0.05}px)`   // PC: mueve 0.5
+      ? `translateY(${offsetY * 0.17}px)`   // PC: mueve 0.5
       : `translateY(${offsetY * 0.17}px)`,  // Móvil: mueve 0.2
   }}
-  className="mt-14 absolute inset-0 m-0 m-auto bg-[url('/images/img1.png')] bg-no-repeat bg-cover bg-center h-[70%] pointer-events-none xl:bg-cover xl:h-[100%] xl:mt-10"
+  className="mt-24 absolute inset-0 m-0 m-auto bg-[url('/images/img1.png')] bg-no-repeat bg-cover bg-center h-[45%] pointer-events-none xl:bg-cover xl:w-[90%] xl:h-[70%] xl:mt-22"
 ></div>
 
         {/* Imagen sobrepuesta con efecto de zoom suave */}
