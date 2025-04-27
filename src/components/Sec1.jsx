@@ -26,14 +26,14 @@ function Sec1() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <div style={{ transform: `translateY(-${offsetY * 0.1}px)` }} className="absolute inset-0 mb-70 bg-[url('/images/vector.png')] bg-no-repeat bg-contain bg-center w-[100%] mix-blend-overlay pointer-events-none sm:w-[80%] sm:mx-0 sm:mx-auto xl:w-[58%] xl:h-[58%]  xl:mt-42 xl:ml-118"></div>
+        <div style={{ transform: `translateY(-${offsetY * 0.1}px)` }} className="absolute inset-0 mb-70 bg-[url('/images/vector.png')] lg:h-[55%] lg:mt-40 lg:mr-10 bg-no-repeat bg-contain bg-center w-[100%] mix-blend-overlay pointer-events-none sm:w-[80%] sm:mx-0 sm:mx-auto xl:w-[58%] xl:h-[58%]  xl:mt-42 xl:ml-118"></div>
         <div
           style={{
             transform: isDesktop
               ? `translateY(${offsetY * 0.17}px)`
               : `translateY(${offsetY * 0.17}px)`,
           }}
-          className="mt-24 absolute inset-0 m-0 m-auto bg-[url('/images/img1.png')] bg-no-repeat bg-cover bg-center h-[45%] pointer-events-none xl:bg-cover xl:w-[90%] xl:h-[70%] xl:mt-18"
+          className="mt-24 absolute inset-0 m-0 m-auto bg-[url('/images/img1.png')] bg-no-repeat bg-cover bg-center h-[45%] lg:h-[80%] lg:mt-12  pointer-events-none xl:bg-cover xl:w-[90%] xl:h-[70%] xl:mt-18"
         ></div>
 
         {/* Top nav */}
@@ -126,7 +126,7 @@ function Sec1() {
               style={{
                 transform: `translateX(${offsetY * 0.2}px)`,
               }}
-              className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl leading-none px-2 font-light sm:ml-18 xl:ml-0"
+              className="text-3xl md:text-5xl lg:text-5xl xl:text-7xl leading-none px-2 font-light sm:ml-18 xl:ml-0"
             >
               Transformación digital
             </h1>
@@ -134,7 +134,7 @@ function Sec1() {
               style={{
                 transform: `translateX(-${offsetY * 0.2}px)`,
               }}
-              className="px-2 text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-none sm:ml-18 xl:ml-0"
+              className="px-2 text-3xl md:text-5xl lg:text-5xl xl:text-7xl font-extrabold leading-none sm:ml-18 xl:ml-0"
             >
               centrada en las personas
             </h1>
@@ -167,7 +167,7 @@ function Sec1() {
               className="flex items-end justify-center h-full md:mt-0"
             >
               <motion.p
-                className="px-2 text-base md:text-xl max-w-sm text-left mb-20 xl:mr-30 xl:mb-0"
+                className="px-2 text-base md:text-xl max-w-sm text-left mb-20 lg:text-lg lg:mb-10 xl:mr-30 xl:mb-0"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
