@@ -22,17 +22,17 @@ function Sec1() {
         className="absolute inset-0 top-41 h-[55%] w-[111vw] xl:top-42 xl:w-[108.5vw] bg-cover bg-center bg-no-repeat mix-blend-overlay pointer-events-none z-[-1] xl:h-[67%] xl:bg-contain"
         style={{
           backgroundImage: "url('/homaro/images/vector.png')",
-          transform: `translate(${-offset.x * 30}px, ${-offset.y * 30}px)`,
+          transform: `translate(${-offset.x * 10}px, ${-offset.y * 10}px)`,
           transition: "transform 0.1s ease-out",
         }}
       />
-
+20
       {/* Imagen con Parallax */}
       <motion.div
         className="absolute inset-0 m-auto h-[60%] bg-cover bg-center pointer-events-none z-[-1] xl:h-[100%] xl:bg-contain"
         style={{
           backgroundImage: "url('/homaro/images/img1.png')",
-          transform: `translate(${offset.x * 30}px, ${offset.y * 30}px)`,
+          transform: `translate(${offset.x * 10}px, ${offset.y * 10}px)`,
           transition: "transform 0.1s ease-out",
         }}
       />
