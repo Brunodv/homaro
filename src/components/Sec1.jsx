@@ -26,7 +26,7 @@ function Sec1() {
           transition: "transform 0.1s ease-out",
         }}
       />
-20
+
       {/* Imagen con Parallax */}
       <motion.div
         className="absolute inset-0 m-auto h-[60%] bg-cover bg-center pointer-events-none z-[-1] xl:h-[100%] xl:bg-contain"
