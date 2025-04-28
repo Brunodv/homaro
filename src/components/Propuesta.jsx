@@ -8,15 +8,15 @@ function Propuesta() {
 
     return (
         <motion.div 
-            className="w-[90%] min-h-screen px-6 py-12 text-black m-auto bg-gray-200 rounded-3xl gap-12 flex flex-col xl:gap-0 md:py-24 md:gap-18 mb-20 xl:mt-20"
+            className="w-[100%] min-h-screen px-6 py-20 text-black m-auto bg-gray-200 gap-12 flex flex-col xl:gap-0 md:py-24 md:gap-18 mb-20 xl:mt-20"
             initial={{ y: 0 }}
             animate={{ y: -offsetY * 0.4 }} // Solo el contenedor principal tiene el parallax
             transition={{ duration: 0.2, ease: "easeOut" }}
         >
             {/* Título y párrafo sin efecto parallax */}
-            <div className="w-full">
-                <h2 className="text-xl px-2 font-bold text-blue-700 mb-8 sm:px-14 md:text-2xl md:px-16 lg:px-22 xl:px-22 2xl:text-xl 2xl:font-bold 2xl:mb-2">PROPUESTA</h2>
-                <p className="text-lg px-2 sm:text-2xl md:text-3xl w-full sm:w-[90%] xl:w-[80%] 2xl:w-[60%] leading-snug text-gray-800 font-light sm:m-0 sm:m-auto sm:px-8 xl:m-0 xl:px-22">
+            <div className="w-full flex flex-col">
+                <h2 className="text-base px-2 font-bold text-blue-700 mb-1 sm:px-14 md:text-2xl md:px-16 lg:px-22 xl:px-22 2xl:text-xl 2xl:font-bold 2xl:mb-2">PROPUESTA</h2>
+                <p className="text-lg px-2 w-[85vw] sm:text-2xl md:text-3xl sm:w-[90%] xl:w-[80%] 2xl:w-[60%] leading-snug text-gray-800 font-light sm:m-0 sm:m-auto sm:px-8 xl:m-0 xl:px-22">
                     Soluciones complementarias que se integran para crear respuestas completas, versátiles y alineadas con los desafíos reales de las organizaciones.
                 </p>
             </div>
