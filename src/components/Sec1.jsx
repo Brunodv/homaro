@@ -54,9 +54,9 @@ function Sec1() {
       </motion.div>
 
       {/* div central */}
-      <div className="h-[45.7vh] w-full xl:h-[46vh] "></div>
+      <div className="h-[45vh] w-full xl:h-[46vh] "></div>
 
-      <div className="h-[25.3vh] w-full xl:h-[43vh] xl:w-[83%] xl:m-0 xl:m-auto xl:flex xl:flex-row xl:justify-between flex items-center justify-center ">
+      <div className="pb-4 h-[26vh] w-full xl:h-[43vh] xl:w-[83%] xl:m-0 xl:m-auto xl:flex xl:flex-row xl:justify-between flex items-center justify-center ">
         <div className="xl:w-[70%]">
         <h1 className="text-3xl xl:ml-9 xl:text-7xl">Transformación digital</h1>
         <h1 className="text-3xl xl:ml-9 font-bold xl:text-7xl">centrada en las personas</h1>
@@ -67,7 +67,7 @@ function Sec1() {
           <span className="text-orange-400 text-3xl leading-none align-middle">
             <MdStarRate size={30} color="#FF5900" />
           </span>
-          <span className="leading-none align-middle m-2 font-light text-xl">
+          <span className="leading-none align-middle m-3 font-light text-xl">
             DESCUBRE CÓMO
           </span>
         </motion.button>

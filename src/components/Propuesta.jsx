@@ -22,15 +22,15 @@ function Propuesta() {
             </div>
 
             {/* Tarjetas sin parallax */}
-            <div className="flex flex-col gap-12 w-full sm:items-center m-0 m-auto lg:w-[70%] md:gap-18 xl:gap-14 2xl:gap-17 xl:my-0 xl:flex-row xl:w-[90%]">
+            <div className="flex flex-col gap-12 w-[70vw] sm:items-center m-0 m-auto lg:w-[70%] md:gap-18 xl:gap-14 2xl:gap-17 xl:my-0 xl:flex-row xl:w-[90%]">
                 {/* Tarjeta 1 */}
-                <div className="relative w-full sm:w-[80%] md:w-[80%] xl:w-[30%] h-[340px] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
+                <div className="relative w-full h-[35vh] sm:w-[80%] md:w-[80%] xl:w-[30%] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
                     <div className="w-full h-full relative cursor-pointer border border-blue-600 rounded-3xl xl:mt-20">
                         {/* Cara frontal */}
                         <div className="absolute w-full h-full flex flex-col justify-between p-4 rounded-3xl hover:bg-[#FF5900] transition-all duration-1000">
                             {/* Símbolo + en la esquina superior derecha */}
                             <div className="flex justify-end">
-                                <TfiPlus className="text-blue-600" size={56} />
+                                <TfiPlus className="text-blue-600" size={40} />
                             </div>
 
                             {/* Título en la parte inferior */}
@@ -40,13 +40,13 @@ function Propuesta() {
                 </div>
 
                 {/* Tarjeta 2 */}
-                <div className="relative w-full sm:w-[80%] md:w-[90%] xl:w-[30%] h-[340px] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px] rounded-3xl">
+                <div className="relative w-full h-[35vh] sm:w-[80%] md:w-[80%] xl:w-[30%] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
                     <div className="w-full h-full relative cursor-pointer xl:mt-40">
                         {/* Cara frontal */}
                         <div className="absolute w-full h-full flex flex-col justify-between p-4 border border-blue-600 rounded-3xl hover:bg-[#FF5900] transition-all duration-1000">
                             {/* Símbolo + en la esquina superior derecha */}
                             <div className="flex justify-end">
-                                <TfiPlus className="text-blue-600" size={56} />
+                                <TfiPlus className="text-blue-600" size={40} />
                             </div>
 
                             {/* Título en la parte inferior */}
@@ -56,13 +56,13 @@ function Propuesta() {
                 </div>
 
                 {/* Tarjeta 3 */}
-                <div className="relative w-full sm:w-[80%] md:w-[90%] xl:w-[30%] h-[340px] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
+                <div className="relative w-full h-[35vh] sm:w-[80%] md:w-[80%] xl:w-[30%] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
                     <div className="w-full h-full relative cursor-pointer border border-blue-600 rounded-3xl">
                         {/* Cara frontal */}
                         <div className="absolute w-full h-full flex flex-col justify-between p-4 rounded-3xl hover:bg-[#FF5900] transition-all duration-1000">
                             {/* Símbolo + en la esquina superior derecha */}
                             <div className="flex justify-end">
-                                <TfiPlus className="text-blue-600" size={56} />
+                                <TfiPlus className="text-blue-600" size={40} />
                             </div>
 
                             {/* Título en la parte inferior */}

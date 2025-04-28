@@ -1,27 +1,29 @@
 function Footer() {
   return (
-    <div className="bg-blue-700 text-white w-full py-16 px-6 md:px-20 flex flex-col gap-12">
-      {/* Contenedor principal */}
-      <div className="flex flex-col md:flex-row justify-between gap-10">
-        {/* Columna Izquierda */}
-        <div className="w-full md:w-[40%] flex flex-col gap-6">
-          <h2 className="text-4xl md:text-5xl font-bold">HOMARO</h2>
-          <p className="text-lg md:text-xl">info@grupohomaro.com</p>
-          <div className="text-lg md:text-xl">
-            <p>CDMX, México.</p>
-            <p>Indaiatuba, Brasil.</p>
-          </div>
+    <div className="bg-[#0240D4] min-h-[80vh] text-white w-full pl-14 pt-16 pb-12 md:px-20 flex flex-col justify-between">
+      {/* Div interno que se estira y separa contenido arriba-abajo */}
+      <div className="border-t-2 flex flex-col h-full gap-12">
+        
+        {/* Grid de Palabras */}
+        <div className="flex flex-col gap-5 mt-8 md:w-[60%] font-thin">
+          <p className="text-4xl sm:text-3xl">Consultoría</p>
+          <p className="text-4xl sm:text-3xl">Educación</p>
+          <p className="text-4xl sm:text-3xl">Plataformas</p>
         </div>
 
-        {/* Grid de Palabras */}
-        <div className="w-full md:w-[60%] grid grid-cols-2 sm:grid-cols-3 gap-4 mt-8 md:mt-0">
-          <p className="text-2xl sm:text-3xl">Consultoría</p>
-          <p className="text-2xl sm:text-3xl">Plitie</p>
-          <p className="text-2xl sm:text-3xl">Educación</p>
-          <p className="text-2xl sm:text-3xl">BiimHub</p>
-          <p className="text-2xl sm:text-3xl">Plataformas</p>
+        <div className="flex flex-col gap-5 mt-8 md:w-[60%] font-thin">
+          <p className="text-4xl sm:text-3xl">Plitie</p>
+          <p className="text-4xl sm:text-3xl">BiimHub</p>
         </div>
+
       </div>
+       {/* Contenedor principal (abajo de todo) */}
+       <div className="flex flex-col text-center md:flex-row justify-between gap-10 pr-14">
+          <div className="w-full md:w-[40%] flex flex-col gap-6">
+            <h2 className="text-4xl md:text-5xl font-bold">HOMARO</h2>
+            <p className="text-lg font-thin md:text-xl">info@grupohomaro.com</p>
+          </div>
+        </div>
     </div>
   );
 }

@@ -16,7 +16,6 @@ function Home() {
       <Propuesta />
       <Sec3 />
       <Sec4 />
-      <Sec5 />
       <Footer />
     </div>
   );
