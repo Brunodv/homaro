@@ -17,7 +17,7 @@ function Sec1() {
       {/* Fondo fijo */}
       <div className="absolute inset-0 bg-[url('/images/img2.png')] bg-cover bg-center z-[-2]" />
 
-{/* Imagen2 con Parallax */}
+{/* Imagen 2 con Parallax */}
 <motion.div
         className="absolute inset-0 top-41 h-[55%] w-[111vw] xl:top-42 xl:w-[108.5vw] bg-cover bg-center bg-no-repeat mix-blend-overlay pointer-events-none z-[-1] xl:h-[67%] xl:bg-contain"
         style={{
