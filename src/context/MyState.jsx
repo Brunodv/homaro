@@ -3,8 +3,13 @@ import { useState, useEffect } from "react";
 
 function MyState({ children }) {
     const [mode, setMode] = useState('light');
-    const [offsetY, setOffsetY] = useState(0);
     const [isDesktop, setIsDesktop] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [offset, setOffset] = useState({ x: 0, y: 0 });
+
+    const toggleMode = () => {
+        setMode(prevMode => prevMode === 'light' ? 'dark' : 'light');
+    };
 
     useEffect(() => {
         if (mode === 'light') {
@@ -14,31 +19,28 @@ function MyState({ children }) {
         }
     }, [mode]);
 
-    const toggleMode = () => {
-        setMode(prevMode => prevMode === 'light' ? 'dark' : 'light');
-    };
+  const toggleMenu = () => {
+    setIsMenuOpen(prevState => !prevState);
+  };
 
-    const handleScroll = () => setOffsetY(window.pageYOffset);
-    const handleResize = () => setIsDesktop(window.innerWidth >= 768);
+    const handleMouseMove = (e) => {
+        const { clientX, clientY } = e;
+        const { innerWidth, innerHeight } = window;
+    
+        const x = (clientX - innerWidth / 2) / (innerWidth / 2);
+        const y = (clientY - innerHeight / 2) / (innerHeight / 2);
+    
+        setOffset({ x, y });
+      };
 
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        window.addEventListener("resize", handleResize);
-
-        handleResize(); // detectar si ya es desktop desde el inicio
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-            window.removeEventListener("resize", handleResize);
-        };
-    }, []);
 
     return (
         <MyContext.Provider value={{ 
             mode, 
             toggleMode,
-            offsetY,
-            isDesktop 
+            toggleMenu,
+            isDesktop,
+            offset, setOffset,isMenuOpen, setIsMenuOpen,handleMouseMove
         }}>
             {children}
         </MyContext.Provider>
