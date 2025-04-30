@@ -34,7 +34,7 @@ function Sec3() {
   const mobileHeight = "100vh";
 
   return (
-    <div className="relative flex items-center justify-center min-h-screen w-screen xl:mt-70">
+    <div className="relative flex items-center justify-center min-h-screen w-screen xl:mt-70 xl:mb-70">
       <motion.div
         ref={containerRef}
         className={`bg-gradient-to-t from-[#011345] to-[#023BC6] z-[-2] absolute ${
