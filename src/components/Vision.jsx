@@ -1,30 +1,38 @@
 import MyContext from "../context/MyContext";
 import { useContext } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useRef, useEffect } from "react";
 
 function Vision() {
   const { offsetY, isDesktop } = useContext(MyContext);
-  const controls = useAnimation();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { amount: 0.3 });
 
-  useEffect(() => {
-    if (isInView) {
-      controls.start({ opacity: 1, y: 0 });
-    } else {
-      controls.start({ opacity: 0, y: 50 });
-    }
-  }, [isInView, controls]);
-
-  // Aquí puedes ajustar la posición inicial
+  // Referencia al contenedor de la línea
+  const lineRef = useRef(null);
+  
+  // Usamos useInView para detectar cuando la línea entra en vista
+  const isInView = useInView(lineRef, { triggerOnce: true, amount: 0.5 });
 
   return (
-    <div
-      className="h-[70vh] flex items-center justify-center flex-col w-full sm:h-[80vh] md:flex-row md:h-[70vh] lg:w-[90%] lg:m-0 lg:m-auto xl:h-[100vh] xl:flex-row-reverse"
-    >
-        <div className="w-full text-left lg:w-[90%] xl:w-[70%] xl:px-20 md:w-[50%]">
+    <div className="relative h-[70vh] flex items-center justify-center flex-col w-full sm:h-[80vh] md:flex-row md:h-[70vh] lg:w-[90%] lg:m-0 lg:m-auto xl:h-[100vh] xl:flex-row-reverse">
+      
+      {/* Línea azul animada */}
+      <motion.div
+        ref={lineRef}
+        className="absolute top-[81%] left-[47%] transform -translate-x-1/2 -translate-y-1/2"
+        style={{
+          backgroundImage: "url('/homaro/images/line-blue.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          width: "30%", // Ajustar el tamaño de la línea según sea necesario
+        }}
+        // Animación de dibujado con `height`
+        initial={{ height: "0%" }} // Empieza invisible
+        animate={{ height: isInView ? "37vh" : "0%" }} // La línea se dibuja cuando entra en vista
+        transition={{ duration: 1, ease: "easeOut" }}
+      />
+
+      <div className="w-full text-left lg:w-[90%] xl:w-[70%] xl:px-20 md:w-[50%] relative z-10">
         <h2 className="px-8 text-sm sm:text-lg sm:px-12 font-bold text-blue-700 md:px-2 xl:text-2xl">
           VISIÓN
         </h2>
