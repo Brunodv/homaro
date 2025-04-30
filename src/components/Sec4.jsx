@@ -12,13 +12,13 @@ function Sec4() {
       // La línea se dibuja de arriba hacia abajo cuando entramos en vista
       controls.start({ 
         clipPath: "inset(0% 0% 0% 0%)",  // Revela la línea de arriba hacia abajo
-        transition: { duration: 1.5, ease: "easeOut" },
+        transition: { duration: 2, ease: "easeOut" },
       });
     } else {
       // Cuando no estamos en vista, la línea se oculta desde abajo
       controls.start({
         clipPath: "inset(0% 0% 100% 0%)",  // La parte inferior se oculta primero
-        transition: { duration: 1.5, ease: "easeOut" },
+        transition: { duration: 0.1, ease: "easeOut" },
       });
     }
   }, [isInView, controls]);
@@ -36,7 +36,7 @@ function Sec4() {
           initial={{ clipPath: "inset(0% 0% 100% 0%)" }}  // Empieza invisible, con la parte superior oculta
         />
         {/* Contenedor principal responsive */}
-        <div className="font-bold xl:fond-normal xl:min-h-[100vh] mb-5 w-full gap-2 h-full xl:gap-32 flex flex-col xl:flex-row xl:w-[70%] xl:h-[55%]">
+        <div className="font-bold xl:font-normal xl:min-h-[100vh] mb-5 w-full gap-2 h-full xl:gap-32 flex flex-col xl:flex-row xl:w-[70%] xl:h-[55%]">
           {/* Título sin borde animado */}
           <div className="flex xl:w-[100%] xl:h-[40vh] px-8 xl:px-0 xl:items-start xl:mt-70 md:items-center md:justify-center">
             <div className="flex flex-col sm:gap-4 sm:flex-row md:gap-4 md:px-10 sm:flex-col xl:flex-col xl:gap-0">
@@ -46,7 +46,7 @@ function Sec4() {
               <h2 className="text-3xl sm:text-3xl md:text-4xl xl:text-6xl text-blue-700 anotherFont">
                 el cambio
               </h2>
-              <h2 className="text-3xl m:text-3xl md:text-4xl xl:text-6xl text-blue-700 anotherFont">
+              <h2 className="text-3xl sm:text-3xl md:text-4xl xl:text-6xl text-blue-700 anotherFont">
                 con propósito
               </h2>
             </div>
