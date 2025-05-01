@@ -8,7 +8,7 @@ function Propuesta() {
 
     return (
         <motion.div 
-            className="w-[100%] min-h-screen px-6 py-20 text-black m-auto bg-gray-200 gap-12 flex flex-col xl:gap-0 md:py-24 md:gap-18 mb-20 xl:mt-20"
+            className="w-[100%] min-h-screen px-6 py-20 text-black m-auto bg-gray-200 gap-12 flex flex-col xl:gap-0 md:py-24 md:gap-18 mb-20 xl:mt-20 xl:rounded-4xl xl:w-[90%]"
             initial={{ y: 0 }}
             animate={{ y: -offsetY * 0.4 }} // Solo el contenedor principal tiene el parallax
             transition={{ duration: 0.2, ease: "easeOut" }}
