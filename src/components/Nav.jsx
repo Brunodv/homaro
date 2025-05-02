@@ -42,7 +42,7 @@ function Nav() {
               }}
               exit={{
                 scaleY: 0,
-                width: '0%',
+                width: '15%',
                 originY: 0
               }}
               transition={{ duration: 0.4 }}

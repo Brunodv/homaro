@@ -39,7 +39,7 @@ function Sec1() {
 {/* Top nav */}
 <motion.div className="absolute left-1/2 -translate-x-1/2 flex justify-center items-center w-[10%] bg-transparent h-[140px] xl:h-[120px] z-[2] text-white">
   <Link to="/">
-    <motion.h1 className="text-2xl md:text-4xl font-bold text-center text-[#123c7d]">
+    <motion.h1 className="text-2xl md:text-4xl font-bold text-center text-white">
       HOMARO
     </motion.h1>
   </Link>
