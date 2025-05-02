@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <div className="bg-[#0240D4] min-h-[80vh] text-white w-full pl-14 pt-16 pb-12 md:px-20 flex flex-col justify-between">
-      {/* Div interno que se estira y separa contenido arriba-abajo */}
+<div className="bg-[#0240D4] h-[700px] sm:h-[800px] md:h-[900px] text-white w-full pl-14 pt-16 pb-12 md:px-20 flex flex-col justify-between">
+{/* Div interno que se estira y separa contenido arriba-abajo */}
       <div className="border-t-2 flex flex-col h-full gap-12">
         
         {/* Grid de Palabras */}

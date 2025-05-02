@@ -7,9 +7,12 @@ import Sec5 from "../components/Sec5";
 import Footer from "../components/Footer";
 import BouncingCircle from "../components/BouncingCircle";
 import Nav from "../components/Nav";
+import Layout from "../components/Layout";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
+    <Layout>
     <div className="relative w-full flex flex-col text-white overflow-hidden">
       <Sec1 />
       <Vision />
@@ -18,6 +21,7 @@ function Home() {
       <Sec4 />
       <Footer />
     </div>
+    </Layout>
   );
 }
 

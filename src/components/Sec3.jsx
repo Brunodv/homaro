@@ -4,55 +4,42 @@ import { useState, useEffect, useRef } from "react";
 function Sec3() {
   const containerRef = useRef(null);
 
-  // Detectar si es mobile
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 640);
     };
-
     window.addEventListener("resize", handleResize);
     handleResize();
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Scroll animation
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start 100%", "end 1%"]
   });
 
   const width = useTransform(scrollYProgress, [0, 1], ["100vw", "200vw"]);
-  //const width = useTransform(scrollYProgress, [0, 1], ["140vw", "140vw"]);
-  const height = useTransform(scrollYProgress, [0, 1], ["150vh", "200vh"]);
-
-  // Valores móviles
+  const height = useTransform(scrollYProgress, [0, 1], ["1500px", "2000px"]);
   const mobileWidth = "100vw";
-  const mobileHeight = "100vh";
+  const mobileHeight = "950px";
 
-  // Detectar si el componente está en vista (sin 'once')
   const isInView = useInView(containerRef, { amount: 0.3 });
 
   return (
-    <div className="relative flex items-center justify-center min-h-screen w-screen xl:mt-70 xl:mb-70">
+    <div className="flex items-center justify-center min-h-[950px] sm:min-h-[1150px] md:min-h-[1250px] xl:min-h-[1400px] w-screen z-[0]">
       <motion.div
         ref={containerRef}
-        className={`bg-gradient-to-t from-[#011345] to-[#023BC6] z-[-2] absolute ${
-          isMobile ? "left-0" : "left-1/2 transform -translate-x-1/2"
-        }`}
+        className={`bg-gradient-to-t from-[#011345] to-[#023BC6] z-[-2] absolute ${isMobile ? "left-0" : "left-1/2 transform -translate-x-1/2"}`}
         style={{
           width: isMobile ? mobileWidth : width,
           height: isMobile ? mobileHeight : height,
           clipPath: isMobile ? "none" : "ellipse(80% 40% at 50% 50%)",
         }}
       >
-        {/* Contenido principal */}
         <div className="flex flex-col justify-center items-center w-full h-full">
-          <div className="flex h-[60vh] xl:h-[67vh] rounded-full flex items-end justify-center">
+          <div className="flex min-h-[600px] sm:min-h-[700px] md:min-h-[750px] xl:min-h-[850px] rounded-full items-end justify-center">
             <div className="rounded-full aspect-square w-[95vw] md:w-[50vw] xl:w-[35vw] bg-[url('/images/img4.png')] bg-cover bg-center p-6 flex items-center justify-center">
               <h1 className="text-2xl font-light w-[40%] xl:text-5xl text-white leading-tight text-center">
                 Experiencia en todas las industrias que impactan al mundo.
@@ -60,7 +47,6 @@ function Sec3() {
             </div>
           </div>
 
-          {/* Texto centrado en mobile */}
           <div className="w-full m-auto flex flex-col items-center justify-center text-white sm:hidden gap-2 px-6">
             {[
               "Arquitectura",
@@ -78,7 +64,6 @@ function Sec3() {
           </div>
         </div>
 
-        {/* Esferas en desktop */}
         <div className="hidden sm:block">
           <AnimatePresence>
             {isInView && (
@@ -99,7 +84,7 @@ function Sec3() {
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{
                       duration: 0.8,
-                      delay: 0.7 + index * 0.15,
+                      delay: 0.5 + index * 0.15,
                       ease: "easeOut",
                     }}
                     className="absolute rounded-full border-2 border-white flex items-center justify-center text-white font-thin"

@@ -8,8 +8,8 @@ function Propuesta() {
 
     return (
         <motion.div 
-            className="w-[100%] min-h-screen px-6 py-20 text-black m-auto bg-gray-200 gap-12 flex flex-col xl:gap-0 md:py-24 md:gap-18 mb-20 xl:mt-20 xl:rounded-4xl xl:w-[90%]"
-            initial={{ y: 0 }}
+        className="w-full  min-h-[950px] sm:min-h-[640px] md:min-h-[680px] xl:min-h-[920px] px-6 py-20 text-black m-auto bg-gray-200 gap-12 flex flex-col xl:gap-0 md:py-24 md:gap-18 mb-20 xl:w-[85%] xl:mt-20 xl:rounded-4xl"
+        initial={{ y: 0 }}
             animate={{ y: -offsetY * 0.4 }} // Solo el contenedor principal tiene el parallax
             transition={{ duration: 0.2, ease: "easeOut" }}
         >
@@ -24,7 +24,7 @@ function Propuesta() {
             {/* Tarjetas sin parallax */}
             <div className="flex flex-col gap-12 w-[70vw] sm:items-center m-0 m-auto lg:w-[70%] md:gap-18 xl:gap-14 2xl:gap-17 xl:my-0 xl:flex-row xl:w-[90%]">
                 {/* Tarjeta 1 */}
-                <div className="relative w-full h-[35vh] sm:w-[80%] md:w-[80%] xl:w-[30%] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
+                <div className="relative w-full h-[280px] sm:w-[80%] md:w-[80%] xl:w-[30%] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
                     <div className="w-full h-full relative cursor-pointer border border-blue-600 rounded-3xl xl:mt-20">
                         {/* Cara frontal */}
                         <div className="absolute w-full h-full flex flex-col justify-between p-4 rounded-3xl hover:bg-[#FF5900] transition-all duration-1000">
@@ -40,7 +40,7 @@ function Propuesta() {
                 </div>
 
                 {/* Tarjeta 2 */}
-                <div className="relative w-full h-[35vh] sm:w-[80%] md:w-[80%] xl:w-[30%] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
+                <div className="relative w-full h-[280px] sm:w-[80%] md:w-[80%] xl:w-[30%] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
                     <div className="w-full h-full relative cursor-pointer xl:mt-40">
                         {/* Cara frontal */}
                         <div className="absolute w-full h-full flex flex-col justify-between p-4 border border-blue-600 rounded-3xl hover:bg-[#FF5900] transition-all duration-1000">
@@ -56,7 +56,7 @@ function Propuesta() {
                 </div>
 
                 {/* Tarjeta 3 */}
-                <div className="relative w-full h-[35vh] sm:w-[80%] md:w-[80%] xl:w-[30%] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
+                <div className="relative w-full h-[280px] sm:w-[80%] md:w-[80%] xl:w-[30%] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
                     <div className="w-full h-full relative cursor-pointer border border-blue-600 rounded-3xl">
                         {/* Cara frontal */}
                         <div className="absolute w-full h-full flex flex-col justify-between p-4 rounded-3xl hover:bg-[#FF5900] transition-all duration-1000">

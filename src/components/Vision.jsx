@@ -14,12 +14,12 @@ function Vision() {
   const isInView = useInView(lineRef, { triggerOnce: true, amount: 0.5 });
 
   return (
-    <div className="relative h-[70vh] flex items-center justify-center flex-col w-full sm:h-[80vh] md:flex-row md:h-[70vh] lg:w-[90%] lg:m-0 lg:m-auto xl:h-[100vh] xl:flex-row-reverse">
+    <div className="relative h-[650px] flex items-center justify-center flex-col w-full sm:h-[700px] md:flex-row md:h-[600px] lg:w-[90%] lg:m-0 lg:m-auto xl:h-[1000px] xl:flex-row-reverse">
       
       {/* Línea azul animada */}
       <motion.div
         ref={lineRef}
-        className="absolute top-[81%] left-[47%] transform -translate-x-1/2 -translate-y-1/2"
+        className="absolute  transform translate-x-[-10%] translate-y-[0%] top-[60%] hidden xl:block"
         style={{
           backgroundImage: "url('/homaro/images/line-blue.png')",
           backgroundSize: "cover",
@@ -28,7 +28,7 @@ function Vision() {
         }}
         // Animación de dibujado con `height`
         initial={{ height: "0%" }} // Empieza invisible
-        animate={{ height: isInView ? "37vh" : "0%" }} // La línea se dibuja cuando entra en vista
+        animate={{ height: isInView ? "370px" : "0%" }} // La línea se dibuja cuando entra en vista
         transition={{ duration: 1, ease: "easeOut" }}
       />
 
