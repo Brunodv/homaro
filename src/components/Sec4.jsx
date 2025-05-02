@@ -11,7 +11,7 @@ function Sec4() {
     if (isInView) {
       controls.start({ 
         clipPath: "inset(0% 0% 0% 0%)",
-        transition: { duration: 5, ease: "easeOut" },
+        transition: { duration: 3, ease: "easeOut" },
       });
     } else {
       controls.start({
@@ -32,6 +32,22 @@ function Sec4() {
           className="absolute inset-0 bg-contain bg-no-repeat bg-center top-[0%] left-[-20%] z-[-2] h-full w-full hidden xl:block"
           style={{
             backgroundImage: "url('/homaro/images/complex.png')",
+          }}
+          animate={controls}
+          initial={{ clipPath: "inset(0% 0% 100% 0%)" }}
+        />
+        <div
+          className="absolute inset-0 bg-contain bg-no-repeat bg-center top-[-82%] left-[55%] z-[-2] h-full w-full block sm:hidden"
+          style={{
+            backgroundImage: "url('/homaro/images/mobile-lin-3.png')",
+          }}
+          animate={controls}
+          initial={{ clipPath: "inset(0% 0% 100% 0%)" }}
+        />
+        <div
+          className="absolute inset-0 bg-contain bg-no-repeat bg-center top-[30%] left-[55%] z-[-2] h-full w-full block sm:hidden"
+          style={{
+            backgroundImage: "url('/homaro/images/mobile-line-2.png')",
           }}
           animate={controls}
           initial={{ clipPath: "inset(0% 0% 100% 0%)" }}

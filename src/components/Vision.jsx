@@ -14,7 +14,7 @@ function Vision() {
   const isInView = useInView(lineRef, { triggerOnce: true, amount: 0.5 });
 
   return (
-    <div className="relative h-[650px] flex items-center justify-center flex-col w-full sm:h-[700px] md:flex-row md:h-[600px] lg:w-[90%] lg:m-0 lg:m-auto xl:h-[1000px] xl:flex-row-reverse">
+    <div className="relative h-[650px] flex items-center justify-center flex-col w-full sm:h-[700px] md:flex-row md:h-[600px] lg:w-[90%] lg:m-0 lg:m-auto xl:h-[1000px] md:flex-row-reverse">
       
       {/* Línea azul animada */}
       <motion.div
@@ -32,8 +32,8 @@ function Vision() {
         transition={{ duration: 1, ease: "easeOut" }}
       />
 
-      <div className="w-full text-left lg:w-[90%] xl:w-[70%] xl:px-20 md:w-[50%] relative z-10">
-        <h2 className="px-8 text-sm sm:text-lg sm:px-12 font-bold text-blue-700 md:px-2 xl:text-2xl">
+<div className="w-full text-left lg:w-[90%] xl:w-[70%] xl:px-20 md:w-[50%] md:px-4 relative z-10">
+        <h2 className="px-8 text-sm sm:text-lg sm:px-12 md:px-2 font-bold text-blue-700 xl:text-2xl">
           VISIÓN
         </h2>
         <p className="px-8 py-4 text-xl font-light sm:text-2xl sm:px-12 xl:text-3xl text-gray-700 leading-tight md:px-2 lg:pb-28 xl:pb-42 2xl:pb-72 xl:text-4xl">
@@ -43,7 +43,7 @@ function Vision() {
           profundamente humana.
         </p>
       </div>
-      <div className="w-[95%] sm:w-[63%] mx-auto xl:m-auto xl: m-0">
+      <div className="w-[75%]  mx-auto xl:m-auto xl: m-0">
         <img
           src="images/img3.jpg"
           className="w-full h-full object-cover"
