@@ -1,7 +1,6 @@
 import Sec1 from "../components/Sec1";
 import Propuesta from "../components/Propuesta";
 import Vision from "../components/Vision";
-import Sec3 from "../components/Sec3";
 import Sec4 from "../components/Sec4";
 import Sec5 from "../components/Sec5";
 import Footer from "../components/Footer";
@@ -9,6 +8,7 @@ import BouncingCircle from "../components/BouncingCircle";
 import Nav from "../components/Nav";
 import Layout from "../components/Layout";
 import { Link } from "react-router-dom";
+import Experiencia from "../components/Experiencia";
 
 function Home() {
   return (
@@ -17,7 +17,7 @@ function Home() {
       <Sec1 />
       <Vision />
       <Propuesta />
-      <Sec3 />
+      <Experiencia />
       <Sec4 />
       <Footer />
     </div>

@@ -14,17 +14,17 @@ function Propuesta() {
             transition={{ duration: 0.2, ease: "easeOut" }}
         >
             {/* Título y párrafo sin efecto parallax */}
-            <div className="w-full flex flex-col">
-                <h2 className="text-base px-2 font-bold text-blue-700 mb-1 sm:px-14 md:text-2xl md:px-16 lg:px-22 xl:px-22 2xl:text-xl 2xl:font-bold 2xl:mb-2">PROPUESTA</h2>
-                <p className="text-lg px-2 w-[85vw] sm:text-2xl md:text-3xl sm:w-[90%] xl:w-[80%] 2xl:w-[60%] leading-snug text-gray-800 font-light sm:m-0 sm:m-auto sm:px-8 xl:m-0 xl:px-22">
+            <div className="w-full flex flex-col pl-2 sm:pl-6 md:pl-10 lg:pl-10 xl:pl-14 2xl:px-16">
+                <h2 className="text-base font-bold text-blue-700 md:text-2xl 2xl:text-xl 2xl:font-bold 2xl:mb-2">PROPUESTA</h2>
+                <p className="text-lg w-[85vw] sm:text-2xl md:text-3xl sm:w-[90%] xl:w-[80%] 2xl:w-[60%] leading-snug text-gray-800 font-light">
                     Soluciones complementarias que se integran para crear respuestas completas, versátiles y alineadas con los desafíos reales de las organizaciones.
                 </p>
             </div>
 
             {/* Tarjetas sin parallax */}
-            <div className="flex flex-col gap-12 w-[70vw] sm:items-center m-0 m-auto lg:w-[70%] md:gap-18 xl:gap-14 2xl:gap-17 xl:my-0 xl:flex-row xl:w-[90%]">
+            <div className="flex flex-col gap-12 w-[250px] sm:items-center m-0 m-auto lg: sm:grid sm:grid-cols-2 xl:flex sm:w-[100%] sm:px-10 sm:gap-8 lg:w-[80%] md:w-[100%] md:gap-8 xl:gap-8 2xl:gap-12 xl:my-0 xl:flex-row xl:w-[100%]">
                 {/* Tarjeta 1 */}
-                <div className="relative w-full h-[280px] sm:w-[80%] md:w-[80%] xl:w-[30%] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
+                <div className="relative w-full h-[280px] sm:w-[100%]  md:w-[100%] lg:w-[100%] xl:w-[30%] sm:h-[300px] md:h-[400px] xl:h-[340px] 2xl:h-[440px]">
                     <div className="w-full h-full relative cursor-pointer border border-blue-600 rounded-3xl xl:mt-20">
                         {/* Cara frontal */}
                         <div className="absolute w-full h-full flex flex-col justify-between p-4 rounded-3xl hover:bg-[#FF5900] transition-all duration-1000">
@@ -40,7 +40,7 @@ function Propuesta() {
                 </div>
 
                 {/* Tarjeta 2 */}
-                <div className="relative w-full h-[280px] sm:w-[80%] md:w-[80%] xl:w-[30%] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
+                <div className="relative w-full h-[280px] sm:w-[100%]  md:w-[100%] lg:w-[100%] xl:w-[30%] sm:h-[300px] md:h-[400px] xl:h-[340px] 2xl:h-[440px]">
                     <div className="w-full h-full relative cursor-pointer xl:mt-40">
                         {/* Cara frontal */}
                         <div className="absolute w-full h-full flex flex-col justify-between p-4 border border-blue-600 rounded-3xl hover:bg-[#FF5900] transition-all duration-1000">
@@ -56,7 +56,7 @@ function Propuesta() {
                 </div>
 
                 {/* Tarjeta 3 */}
-                <div className="relative w-full h-[280px] sm:w-[80%] md:w-[80%] xl:w-[30%] sm:h-[440px] md:h-[640px] xl:h-[340px] 2xl:h-[440px]">
+                <div className="relative w-full h-[280px] sm:w-[100%]  md:w-[100%] lg:w-[100%] xl:w-[30%] sm:h-[300px] md:h-[400px] xl:h-[340px] 2xl:h-[440px]">
                     <div className="w-full h-full relative cursor-pointer border border-blue-600 rounded-3xl">
                         {/* Cara frontal */}
                         <div className="absolute w-full h-full flex flex-col justify-between p-4 rounded-3xl hover:bg-[#FF5900] transition-all duration-1000">
