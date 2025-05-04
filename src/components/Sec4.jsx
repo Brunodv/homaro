@@ -29,7 +29,7 @@ function Sec4() {
       <div className="xl:flex xl:flex-col xl:m-0 xl:m-auto xl:items-center xl:justify-center">
         {/* 🎯 Fondo animado */}
         <motion.div
-          className="absolute inset-0 bg-contain bg-no-repeat bg-center top-[0%] left-[-20%] z-[-2] h-full w-full hidden xl:block"
+          className="absolute inset-0 bg-contain bg-no-repeat bg-center top-[2%] left-[-18%] z-[-2] h-full w-full hidden xl:block"
           style={{
             backgroundImage: "url('/homaro/images/complex.png')",
           }}
@@ -56,7 +56,7 @@ function Sec4() {
         {/* Contenedor principal responsive */}
         <div className="font-bold xl:font-normal mb-5 w-full gap-2 h-full flex flex-col xl:flex-row xl:w-[70%] xl:h-[900px] xl:gap-32">
           {/* Título sin borde animado */}
-          <div className="flex xl:w-[100%] xl:h-[400px] px-8 xl:px-0 xl:items-start xl:mt-70 md:items-center md:justify-left">
+          <div className="flex xl:w-[100%] xl:h-[400px] px-8 xl:px-0 xl:items-start xl:mt-55 md:items-center md:justify-left">
             <div className="flex flex-col sm:gap-4 sm:flex-row md:gap-4 md:px-10 sm:flex-col xl:flex-col xl:gap-0">
               <h2 className="text-3xl sm:text-3xl md:text-4xl xl:text-6xl text-blue-700 anotherFont">
                 Impulsamos
